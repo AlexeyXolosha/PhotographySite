@@ -1,0 +1,399 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 360px;
+  font-family: var(--font-family);
+  background-color: var(--bg);
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url("../fonts/JosefinSansBold.woff2") format('woff2');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/MontserratExtraBold.woff2") format('woff2');
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/MontserratSemiBold.woff2") format('woff2');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/PoppinsMedium.woff2") format('woff2');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/PoppinsRegular.woff2") format('woff2');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --bg: #1F2022;
+  --main-text: #EEEEEE;
+  --light-text: #fff;
+  --second-color: #00ADB5;
+
+  --font-family: "Josefin Sans", sans-serif;
+  --second-family: "Montserrat", sans-serif;
+  --third-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1382px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /*12 колонок где каждая колонка занимает равную долю доступного пространства контейнера.*/
+  gap: 20px;
+}
+
+/*Header*/
+.header {
+  padding: 25px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {}
+
+.burger {
+  display: none;
+}
+
+.nav {}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-item {}
+
+.nav-link {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: #eee;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:focus {
+  outline: none;
+}
+
+.nav-link:focus-visible {
+  outline: 2px dashed var(--second-color);
+  outline-offset: 4px;
+}
+
+.nav-link:active {
+  color: var(--second-color);
+}
+
+.nav-link--active {
+  color: var(--second-color);
+}
+
+@media (any-hover: hover) {
+  .nav-link:hover {
+    color: var(--second-color);
+  }
+}
+
+.btn-main {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  border: none;
+  border-radius: 3px;
+  padding: 16px;
+  background: #fff;
+}
+
+.hero_container {
+  height: 100%;
+  min-height: calc(100vh - 100px);
+}
+
+/*Main Section Hero*/
+.hero {
+  background-image: url("../img/background.png");
+  background-position: left 30 bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* height: 100%;
+  min-height: calc(100vh - 100px); */
+}
+
+.hero__left,
+.hero-content {
+  grid-column: 6 span;
+  padding-bottom: 40px;
+  /*Что бы каждый элемент занимал по шесть колонок*/
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero__text {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 125%;
+  letter-spacing: 0.04em;
+  color: var(--second-color);
+
+}
+
+.hero__text-sub {
+  position: relative;
+  margin-top: 30vh;
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 167%;
+  color: var(--main-text);
+  max-width: 380px;
+  padding-left: 30px;
+}
+
+.hero__text-sub::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 20px;
+  height: 3px;
+  background-color: var(--second-color);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-left: 42px;
+}
+
+.hero_hello {
+  margin-bottom: 30px;
+  font-family: var(--third-family);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: var(--main-text);
+}
+
+.hero_hello span {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 100px;
+  letter-spacing: 0.06em;
+  color: var(--second-color);
+}
+
+.hero_decription {
+  margin: 0;
+  margin-bottom: auto;
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187%;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hero_shots {
+  margin-top: 30px;
+}
+
+.latest-shots {}
+
+
+.latest-shots__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.latest-shots_title {
+  margin: 0;
+  margin-right: 20%;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+.latest-shots-all {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--second-color);
+}
+
+.latest-shots-slider-content {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.latest-shots__link {
+  flex-shrink: 0;
+}
+
+.latest-shots_image {
+  border-radius: 5px;
+}
+
+.latest-shots-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.latest-shots__btn {
+  width: 28px;
+  height: 28px;
+}
+
+.latest-shots__btn svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  fill: var(--main-text);
+}
+
+.latest-shots--left {}
+
+.latest-shots--right {}
+
+
+.modal-parent {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal-parent--open{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.modal {
+  margin: 20px 0;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.form__field {
+  width: 100%;
+}
+
+.form__text {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+}
+
+.form__btn {
+  width: 100%;
+  background-color: #00ADB5;
+  color: #fff;
+}

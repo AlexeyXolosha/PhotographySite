@@ -1,0 +1,140 @@
+@media (max-width: 1024px) {
+  .hero {
+    background-position: left -200px bottom;
+    background-size: cover;
+  }
+
+  .hero_hello span {
+    font-size: 80px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .hero {
+    background-position: left 20% bottom;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--bg);
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+
+  .nav--active{
+    transform: none;
+    visibility: visible;
+  }
+
+  .nav-list{
+    height: 100%;
+    padding: 50px 0;
+    flex-direction: column;
+  }
+
+  .burger {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 25px;
+  }
+
+  .burger__line {
+    height: 2px;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    background: #fff;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+  .burger__line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .burger__line:first-child {
+    top: 0;
+  }
+
+  .burger__line:last-child {
+    top: calc(100% - 2px);
+  }
+
+  .burger--active .burger__line:nth-child(2) {
+    transform: scale(0);
+  }
+
+  .burger--active .burger__line:first-child {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  .burger--active .burger__line:last-child {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+  .hero__text-sub {
+    display: none;
+  }
+
+  .hero__left {
+    align-items: center;
+  }
+
+  .hero__text {
+    max-width: 100%;
+  }
+
+  .hero-content {
+    padding: 0;
+    padding-top: 200px;
+    align-items: center;
+  }
+
+  .hero_hello {
+    text-align: center;
+  }
+
+  .hero_hello span {
+    display: block;
+  }
+
+  .hero_decription {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background-position: left 25% bottom;
+  }
+
+  .header-container {
+    justify-content: initial;
+  }
+
+  .header__btn {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .btn-main {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+
+}
