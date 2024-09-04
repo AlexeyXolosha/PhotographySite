@@ -265,6 +265,7 @@ img {
 }
 
 .hero_shots {
+  width: 100%;
   margin-top: 30px;
 }
 
@@ -295,8 +296,8 @@ img {
 }
 
 .latest-shots-slider-content {
-  display: flex;
-  gap: 20px;
+  /*display: flex;*/
+  /*gap: 20px;*/
   overflow: hidden;
   margin-bottom: 20px;
 }
